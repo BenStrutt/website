@@ -32,7 +32,7 @@ body {
 }
 
 .names {
-	height: 400px;
+	height: clamp(20px, 20vw, 400px);
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -42,14 +42,14 @@ body {
 .names p {
 	color: antiquewhite;
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-	font-size: 200px;
+	font-size: clamp(50px, 5vw, 400px);
 	font-weight: 1000;
 }
 
 #polina {
-	padding-left: 50px;
+	padding-left: 8vw;
 }
 
 #bennett {
-	padding-right: 50px;
+	padding-right: 8vw;
 }
