@@ -111,6 +111,20 @@ body {
 	text-align: center;
 }
 
+.cursor {
+	--width: 15px;
+	--height: 15px;
+	width: var(--width);
+	height: var(--width);
+	border-radius: 6px;
+	filter: blur(12px);
+	background: rgb(224, 215, 131);
+	position: fixed;
+	left: calc(var(--mouse-X) - calc(var(--width) / 2));
+	top: calc(var(--mouse-Y) - calc(var(--height) / 2));
+	pointer-events: none;
+}
+
 @font-face {
 	font-family: laica;
 	src: url(./fonts/laica-regular.woff2);

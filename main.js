@@ -1,5 +1,11 @@
 const DEFAULT_IMAGE_URL = "./images/setters.jpg";
 
+let root = document.documentElement;
+root.addEventListener("mousemove", (ev) => {
+	root.style.setProperty("--mouse-X", ev.clientX + "px");
+	root.style.setProperty("--mouse-Y", ev.clientY + "px");
+});
+
 let columns = 3;
 let rows = 3;
 let gap = 8;
@@ -36,10 +42,6 @@ async function onImagePuzzleClick(event) {
 	emptyTile.style.transition = "none";
 	tile.style.transform = "none";
 	emptyTile.style.transform = "none";
-
-	// Trigger reflow
-	// tile.offsetHeight;
-	// emptyTile.offsetHeight;
 
 	// why do i need an empty tile if it's invisible?
 	tile.style.transition = "transform 0.2s ease-in-out";
